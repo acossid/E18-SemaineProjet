@@ -20,10 +20,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: var(--paper-purple-500);
+        background-color: #fafafa;
         transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 1;
-        color: var(--paper-purple-50);
 
         @apply(--layout);
         @apply(--layout-center-center);
@@ -34,15 +33,29 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         pointer-events: none;
       }
 
+      .connect-content {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        align-items: center;
+        justify-content: space-around;
+      }
+
       paper-button > * {
         vertical-align: middle;
         text-transform: none;
+        background-color: #F47C7C;
+        color: #fefefe;
+        padding: 7px 20px;
+        border-radius: 5px;
       }
     </style>
-    <paper-button on-tap="signIn" disabled="[[disabled]]">
-      <iron-icon icon="account-circle"></iron-icon>
-      <span>Sign in with Google</span>
-    </paper-button>
+    <div class="connect-content">
+      <img src="../../images/SenseLove.png" width="185px" alt="senseLoveLogo" class="logoSenseLove">
+      <paper-button on-tap="signIn" disabled="[[disabled]]"> 
+        <span>Connectez-vous avec Facebook</span>
+      </paper-button>
+    </div>
   </template>
   <script>
     Polymer({
