@@ -1,0 +1,60 @@
+
+<dom-module id="sl-inscription">
+    <template>
+    <form action="POST" class="testform" cf-form-element>
+       <div class="form-section">
+            <label for="checking">Validation</label>
+                <input type="text" cf-questions="Bienvenue {user.name}! Vous habitez à {user.city} et vous avez {user.age} ans. C'est bon? " name="checking">
+        </div>
+        <div class="form-section">
+            <label for="Interest">Intérêt</label>
+           <select name="interest" cf-questions="Super! Qu'est-ce qui vous-intéresse en amour?">
+               <option value="femmes">Femmes</option>
+               <option value="hommes">Hommes</option>
+               <option value="femmes-et-hommes">Femmes et Hommes</option>
+           </select>
+        </div>
+        <div class="form-section">
+            <label for="age-interest">Préférences d'âge</label>
+            <input type="number" cf-questions="C'est noté! Et jusqu'à quelle différence d'âge êtes vous prêt à aller en amour?" name="age-interest">
+        </div>
+        <div class="form-section">
+            <label for="music">Musique</label>
+            <input type="text" pattern="[A-Za-z0-9] - [A-Za-z0-9]" cf-error="Ce n'est pas la bonne syntaxe! Utilisez 'Artiste - Chanson'" cf-questions="OK! Maintenant, pouvez-vous me dire quelle musique vous définit selon vous? (Artiste - Chanson)" name="music">
+        </div>
+        <div class="form-section">
+            <label for="food">Plat préféré</label>
+            <input type="text" cf-questions="J'aime bien! Et quel est votre plat préféré?" name="food">
+        </div>
+        <div class="form-section">
+            <label for="perfume">Parfum</label>
+            <input type="text" cf-questions="Goûtu, j'en ai l'eau à la bouche! <br> Enfin, quel est votre parfum favori?" name="food">
+        </div>
+        <div class="form-section">
+            <input type="submit" cf-questions="Merci beaucoup, vous avez toutes les cartes en main pour trouver le grand amour !" name="food">
+        </div>
+
+    </form>
+    <div class="cf-context"> </div>
+    </template>
+      <script>
+    Polymer({
+      is: 'sl-inscription',
+
+      properties: {
+        disabled: {
+          type: Boolean,
+          reflectToAttribute: true,
+          value: false
+        },
+
+        signedIn: {
+          type: Boolean,
+          reflectToAttribute: true,
+          value: false
+        }
+      },
+    });
+  </script>
+</dom-module>
+</html>
