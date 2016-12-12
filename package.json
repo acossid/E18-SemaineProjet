@@ -1,0 +1,23 @@
+{
+  "name": "e18-semaine-projet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "firebase-tools": "^3.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acossid/E18-SemaineProjet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acossid/E18-SemaineProjet/issues"
+  },
+  "homepage": "https://github.com/acossid/E18-SemaineProjet#readme"
+}
