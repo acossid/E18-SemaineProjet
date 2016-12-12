@@ -16,7 +16,7 @@
         </div>
         <div class="form-section">
             <label for="age-interest">Préférences d'âge</label>
-            <input type="number" cf-questions="C'est noté! Et jusqu'à quelle différence d'âge êtes vous prêt à aller en amour?" name="age-interest">
+            <input type="number" pattern="[0-9]" cf-questions="C'est noté! Et jusqu'à quelle différence d'âge êtes vous prêt à aller en amour?" cf-error="Il faut rentrer un nombre !" name="age-interest">
         </div>
         <div class="form-section">
             <label for="music">Musique</label>
@@ -31,7 +31,12 @@
             <input type="text" cf-questions="Goûtu, j'en ai l'eau à la bouche! <br> Enfin, quel est votre parfum favori?" name="food">
         </div>
         <div class="form-section">
-            <input type="submit" cf-questions="Merci beaucoup, vous avez toutes les cartes en main pour trouver le grand amour !" name="food">
+            <select  cf-questions="Merci beaucoup, vous avez toutes les cartes en main pour trouver le grand amour !" name="final">
+            <option value=""></option>
+            <option value="C'est parti">C'est parti !</option>
+        </div>
+        <div class="form-section">
+          <input type="submit">
         </div>
 
     </form>

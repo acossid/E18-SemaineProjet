@@ -34,6 +34,13 @@
       auth-domain = "e18-semaineprojet.firebaseapp.com"
       database-url = "https://e18-semaineprojet.firebaseio.com">
     </firebase-app>
+    <app-route route="{{route}}" tail="subroute" data="{{data}}">
+</app-route>
+<iron-pages selected="[[routeData.view]]" attr-for-selected="name">
+  <my-profile-view name="profile" route="{{subroute}}"></my-profile-view>
+  <my-message-list-view name="messages" route="{{subroute}}"></my-message-list-view>
+  <my-detail-view name="detail" route="{{subroute}}"></my-detail-view>
+</iron-pages>
     <senselove-app></senselove-app>
   </body>
 </html>

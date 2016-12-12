@@ -21,12 +21,6 @@
 	    signed-in="{{signedIn}}"
 	    user="{{user}}">
 	</firebase-auth>
-	<paper-fab
-	    icon="add"
-	    on-tap="create"
-	    disabled="[[!online]]"
-	    aria-label="Add note">
-	</paper-fab>
 	<firebase-document
 	    id="document"
 	    app-name="E18-SemaineProjet"
@@ -45,9 +39,11 @@
 	    data="{{notes}}"
 	    persisted-data="{{persistedNotes}}">
 	</app-indexeddb-mirror>
-<!-- 	<sl-inscription
-	    id="inscription">
-	</sl-inscription> -->
+	<sl-inscription
+	    id="inscription"
+	    disabled="[[online]]"
+	    >
+	</sl-inscription>
 	<div class="notes">
 	  <template is="dom-repeat" items="[[persistedNotes]]" as="note">
 	    <sl-note
